@@ -1,6 +1,6 @@
 # Checkmate search for progressive chess
 
-An A* based search algorithm with custom heuristics that finds a sequence of legal moves leading to checkmate for the given board state of a progressive chess game. Assignment for the Algorithms course at the University of Ljubljana, Faculty of Computer and Information Science in 2019. Porocilo.pdf file contains a full report in the Slovene language. 
+An A* based search algorithm with custom heuristics that finds a sequence of legal moves leading to checkmate for the given board state of a progressive chess game. A homework assignment for the Algorithms course at the University of Ljubljana, Faculty of Computer and Information Science in 2019. Porocilo.pdf file contains a full report in the Slovene language. 
 
 [Progressive chess](https://en.wikipedia.org/wiki/Progressive_chess) is one of the chess variants in which every player makes one more move than the previous one and a checkmate is only valid if it occurs on the player's last move. 
 A good heuristic function, that effectively guides the search, is essential when developing a search algorithm due to the combinatorial complexity of the problem.
@@ -10,7 +10,7 @@ Our implementation takes a current board state in FEN notation and finds a path 
 
 *0.1∗Manhattan - 0.9∗Covering - 0.8∗Depth - 0.5 if the move leads to a queen promotion of the peasant piece*.
 
-Manhattan simply sums up all of the Manhattan distances from all of the player's pieces to the opponent's king. Covering is a number of free tiles around the opponent's king. Depth is the current path's depth (number of previous moves). With this heuristic, our algorithm solves 36/60 testing cases in 743 seconds. On average it takes 7 seconds per case.
+Manhattan simply sums up all of the Manhattan distances from all of the player's pieces to the opponent's king. Covering is a number of free tiles around the opponent's king. Depth is the current path's depth (number of previous moves). With this heuristic, our algorithm solves 36 testing cases within the timeout limit of 20 seconds. On average it takes 7 seconds per solved case.
 
 ## Literature
 
